@@ -1,9 +1,9 @@
-   10 a=usr(1)
+   10 a=usr(5)
    20 a=usr("=hotreg")
    30 bank 128
    40 poke $d060,1 : rem shift screen memory by 1 byte
    50 a=rnd(0)
-   60 if peek($d060)<>1 then print"error: hotreg triggered by rnd!":a=usr("f"):a=usr("d"):end
+   60 if peek($d060)<>1 then a = usr("/reason: hotreg triggered by rnd!"):goto 999
    70 poke$d060,0 : rem ...and back to normal
-   80 a=usr("p")
-   90 a=usr("d")
+  998 a=usr("p"):a=usr("d"):end:rem pass
+  999 a=usr("f"):a=usr("d"):end:rem fail
