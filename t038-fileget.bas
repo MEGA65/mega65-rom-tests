@@ -1,3 +1,6 @@
+    1 a=usr(38)
+    2 a=usr("=fileget")
+    3 trap 999
    90 dim s$(200)
   100 ts$="abcdefghijklmnopqrstuvwxyz"
   110 open 1,8,15,"s:temp":close 1
@@ -13,4 +16,5 @@
   210 loop until st
   220 close 1
   230 open 1,8,15,"s:temp":close 1
-  900 dload "runner"
+  998 a=usr("p"):a=usr("d"):end:rem pass
+  999 a=usr("f"):a=usr("d"):end:rem fail
