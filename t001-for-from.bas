@@ -2,7 +2,7 @@
     5 trap 100
    10 a=usr(1)
    20 a=user("=forfrom")
-	 30 dim z(1)
+   30 dim z(1)
    40 a=2
    50 z(0)=5
    60 for i=a*z(0) to 20
